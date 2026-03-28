@@ -1,0 +1,856 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram</title>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Nunito:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="instagram.css" />
+</head>
+
+<body>
+
+  <!-- TOP NAV -->
+  <div class="top-nav">
+    <div class="logo">Instagram</div>
+    <div class="nav-icons">
+      <div class="nav-icon" onclick="showPage('notifications')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg>
+      </div>
+      <div class="nav-icon" onclick="showPage('messages')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+        </svg>
+        <div class="badge">1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+    <div class="bn-item active" id="bn-home" onclick="showPage('home')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+    </div>
+    <div class="bn-item" id="bn-explore" onclick="showPage('explore')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+    </div>
+    <div class="bn-item" id="bn-create">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="3" width="18" height="18" rx="3" />
+        <line x1="12" y1="8" x2="12" y2="16" />
+        <line x1="8" y1="12" x2="16" y2="12" />
+      </svg>
+    </div>
+    <div class="bn-item" id="bn-reels" onclick="showPage('reels')">
+      <img src="images/icons/image.png" alt="Reels" class="bn-icon-img" />
+    </div>
+    <div class="bn-item" id="bn-profile" onclick="showPage('profile')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+
+    <!-- STORIES -->
+    <div class="stories-wrap">
+      <!-- Your Story -->
+      <div class="story-item" onclick="openStory('you')">
+        <div class="story-ring yours">
+          <div class="story-img">
+            <img src="images/profiles/___sai_krishna___.png" alt="___sai_krishna___" />
+          </div>
+        </div>
+        <div class="story-label">Your story</div>
+      </div>
+      <!-- swathij_18 -->
+      <div class="story-item" onclick="openStory('priya')">
+        <div class="story-ring">
+          <div class="story-img">
+            <img src="images/profiles/swathi_j18.png" alt="swathij_18" />
+          </div>
+        </div>
+        <div class="story-label">swathij_18</div>
+      </div>
+      <!-- Durgaa -->
+      <div class="story-item" onclick="openStory('ananya')">
+        <div class="story-ring">
+          <div class="story-img">
+            <img src="images/profiles/Durgaa.png" alt="Durgaa" />
+          </div>
+        </div>
+        <div class="story-label">Durgaa</div>
+      </div>
+      <!-- Nayab -->
+      <div class="story-item" onclick="openStory('meera')">
+        <div class="story-ring">
+          <div class="story-img">
+            <img src="images/profiles/Nayab 😉.png" alt="Nayab" />
+          </div>
+        </div>
+        <div class="story-label">Nayab 😉</div>
+      </div>
+      <!-- urstrulymahesh -->
+      <div class="story-item" onclick="openStory('riya')">
+        <div class="story-ring seen">
+          <div class="story-img">
+            <img src="images/profiles/urstrulymahesh.png" alt="urstrulymahesh" />
+          </div>
+        </div>
+        <div class="story-label">urstrulymahesh</div>
+      </div>
+      <!-- virat.kohli -->
+      <div class="story-item" onclick="openStory('kavya')">
+        <div class="story-ring seen">
+          <div class="story-img">
+            <img src="images/profiles/Virat Kohli.png" alt="virat.kohli" />
+          </div>
+        </div>
+        <div class="story-label">virat.kohli</div>
+      </div>
+    </div>
+
+
+    <!-- POST 1 - swathij_18 sunset -->
+    <div class="post" style="animation-delay:.05s">
+      <div class="post-header">
+        <div class="post-av-wrap">
+          <div class="post-av"><img src="images/profiles/swathi_j18.png" alt="swathij_18" /></div>
+        </div>
+        <div>
+          <div class="post-username">swathij_18</div>
+          <div class="post-location">📍 Ahoo Restaurant</div>
+        </div>
+        <div class="post-more">···</div>
+      </div>
+      <div class="post-img" ondblclick="heartTap(this)">
+        <img src="images/posts/swathij_18.jpg" alt="swathij_18 post" />
+        <div class="heart-overlay" id="h1">❤️</div>
+      </div>
+      <div class="post-actions">
+        <div class="action-btn liked" onclick="toggleLike(this)"><svg viewBox="0 0 24 24" fill="var(--ig-red)"
+            stroke="var(--ig-red)" stroke-width="1.8">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg></div>
+        <div class="action-btn" onclick="openChat()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg></div>
+        <div class="action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg></div>
+        <div class="action-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+          </svg></div>
+      </div>
+      <div class="post-likes">2,847 likes</div>
+      <div class="post-caption"><span>swathij_18</span> dog filter era 🐶🐾 this goofball made me do it 😭😂
+        @___sai_krishna___ #filter #bff #doggo</div>
+      <div class="post-comments" onclick="openChat()">View all 143 comments</div>
+      <div class="post-time">2 HOURS AGO</div>
+    </div>
+
+    <!-- POST 2 - swathij_18 café -->
+    <div class="post" style="animation-delay:.1s">
+      <div class="post-header">
+        <div class="post-av-wrap">
+          <div class="post-av"><img src="images/profiles/swathi_j18.png" alt="swathij_18" /></div>
+        </div>
+        <div>
+          <div class="post-username">swathij_18</div>
+          <div class="post-location">📍 Swach Cafe</div>
+        </div>
+        <div class="post-more">···</div>
+      </div>
+      <div class="post-img" ondblclick="heartTap(this)">
+        <img src="images/posts/swathij_18_1.jpg" alt="swathij_18 post" />
+        <div class="heart-overlay" id="h2">❤️</div>
+      </div>
+      <div class="post-actions">
+        <div class="action-btn liked" onclick="toggleLike(this)"><svg viewBox="0 0 24 24" fill="var(--ig-red)"
+            stroke="var(--ig-red)" stroke-width="1.8">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg></div>
+        <div class="action-btn" onclick="openChat()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg></div>
+        <div class="action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg></div>
+        <div class="action-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+          </svg></div>
+      </div>
+      <div class="post-likes">4,201 likes</div>
+      <div class="post-caption"><span>swathij_18</span> 💗✨ heart eyes and silly glasses — this is peak us 🫶
+        @___sai_krishna___ #couplevibes #filterfun #hearts</div>
+      <div class="post-comments" onclick="openChat()">View all 287 comments</div>
+      <div class="post-time">1 DAY AGO</div>
+    </div>
+
+    <!-- SUGGESTED FOR YOU -->
+    <div class="suggest-bar">
+      <div class="suggest-title">Suggested for you <span>See All</span></div>
+      <div class="suggest-scroll">
+        <div class="suggest-item">
+          <div class="sug-av-wrap">
+            <div class="sug-av"><img src="images/suggested/Anirudh.png" alt="Anirudh" /></div>
+          </div>
+          <div class="sug-name">Anirudh</div>
+          <div class="sug-follow">Follow</div>
+        </div>
+        <div class="suggest-item">
+          <div class="sug-av-wrap">
+            <div class="sug-av"><img src="images/suggested/Arjit Singh.png" alt="Arjit Singh" /></div>
+          </div>
+          <div class="sug-name">Arjit Singh</div>
+          <div class="sug-follow">Follow</div>
+        </div>
+        <div class="suggest-item">
+          <div class="sug-av-wrap">
+            <div class="sug-av"><img src="images/suggested/Marvel.png" alt="Marvel" /></div>
+          </div>
+          <div class="sug-name">Marvel</div>
+          <div class="sug-follow">Follow</div>
+        </div>
+        <div class="suggest-item">
+          <div class="sug-av-wrap">
+            <div class="sug-av"><img src="images/suggested/Ranbir Kapoor.png" alt="Ranbir Kapoor" /></div>
+          </div>
+          <div class="sug-name">Ranbir Kapoor</div>
+          <div class="sug-follow">Follow</div>
+        </div>
+        <div class="suggest-item">
+          <div class="sug-av-wrap">
+            <div class="sug-av"><img src="images/suggested/Swat_s.png" alt="Swat_s" /></div>
+          </div>
+          <div class="sug-name">Swat_s</div>
+          <div class="sug-follow">Follow</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- POST 3 - Durgaa -->
+    <div class="post" style="animation-delay:.15s">
+      <div class="post-header">
+        <div class="post-av-wrap">
+          <div class="post-av"><img src="images/profiles/Durgaa.png" alt="Durgaa" /></div>
+        </div>
+        <div>
+          <div class="post-username">Durgaa</div>
+          <div class="post-location">📍 La Vie en Rose Cafe</div>
+        </div>
+        <div class="post-more">···</div>
+      </div>
+      <div class="post-img" ondblclick="heartTap(this)">
+        <img src="images/posts/Durgaa.jpg" alt="Durgaa post" />
+        <div class="heart-overlay" id="h3">❤️</div>
+      </div>
+      <div class="post-actions">
+        <div class="action-btn liked" onclick="toggleLike(this)"><svg viewBox="0 0 24 24" fill="var(--ig-red)"
+            stroke="var(--ig-red)" stroke-width="1.8">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg></div>
+        <div class="action-btn" onclick="openChat()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg></div>
+        <div class="action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg></div>
+        <div class="action-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+          </svg></div>
+      </div>
+      <div class="post-likes">1,533 likes</div>
+      <div class="post-caption"><span>Durgaa</span> girls just wanna have fun 🎄🧸 tagged @swathij_18 this setup was
+        unreal omg!! #girlstrip #christmasvibes #aesthetic</div>
+      <div class="post-comments">View all 98 comments</div>
+      <div class="post-time">2 DAYS AGO</div>
+    </div>
+
+    <!-- POST 4 - swathij_18 solo -->
+    <div class="post" style="animation-delay:.2s">
+      <div class="post-header">
+        <div class="post-av-wrap">
+          <div class="post-av"><img src="images/profiles/swathi_j18.png" alt="swathij_18" /></div>
+        </div>
+        <div>
+          <div class="post-username">swathij_18</div>
+          <div class="post-location">📍 Swach Cafe</div>
+        </div>
+        <div class="post-more">···</div>
+      </div>
+      <div class="post-img" ondblclick="heartTap(this)">
+        <img src="images/posts/swathij_18_3.jpg" alt="swathij_18 post" />
+        <div class="heart-overlay" id="h4">❤️</div>
+      </div>
+      <div class="post-actions">
+        <div class="action-btn liked" onclick="toggleLike(this)"><svg viewBox="0 0 24 24" fill="var(--ig-red)"
+            stroke="var(--ig-red)" stroke-width="1.8">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+          </svg></div>
+        <div class="action-btn" onclick="openChat()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg></div>
+        <div class="action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <line x1="22" y1="2" x2="11" y2="13" />
+            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+          </svg></div>
+        <div class="action-btn save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+          </svg></div>
+      </div>
+      <div class="post-likes">6,094 likes</div>
+      <div class="post-caption"><span>swathij_18</span> chill vibes only 😎✌️ ft. the usual chaos in the background lol
+        @___sai_krishna___ #chillvibes #ferrywalk #mood</div>
+      <div class="post-comments" onclick="showSorry()">View all 412 comments</div>
+      <div class="post-time">4 DAYS AGO</div>
+    </div>
+  </div>
+
+  <!-- EXPLORE / MEMORIES PAGE -->
+  <div id="explore" class="page">
+    <div class="explore-header">💝 Our Memories</div>
+    <div class="memories-banner">
+      <h2>A Story of Us</h2>
+      <p>Every photo is a moment I never want to forget. Every smile is a reason I'm sorry.</p>
+      <div class="memories-heart">💖</div>
+    </div>
+    <div class="memories-grid">
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/first met.jpg" alt="First Met" /></div>
+        <div class="mem-info">
+          <div class="mem-label">First Met 🙈</div>
+          <div class="mem-date">March 2024</div>
+        </div>
+      </div>
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/Beach day.jpg" alt="Beach Day" /></div>
+        <div class="mem-info">
+          <div class="mem-label">Beach Day 🏖️</div>
+          <div class="mem-date">Still Pendingggg 🤌</div>
+        </div>
+      </div>
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/cycling date.JPG" alt="Cycling Date" /></div>
+        <div class="mem-info">
+          <div class="mem-label">Cycling Date 🚴‍♂️</div>
+          <div class="mem-date">Sep 2025</div>
+        </div>
+      </div>
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/Birthday.jpg" alt="Birthday" /></div>
+        <div class="mem-info">
+          <div class="mem-label">Your Birthday 🎂</div>
+          <div class="mem-date">Nov 2025</div>
+        </div>
+      </div>
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/new year eve.jpeg" alt="New Year Eve" /></div>
+        <div class="mem-info">
+          <div class="mem-label">New Year's Eve 🎆</div>
+          <div class="mem-date">Dec 2025</div>
+        </div>
+      </div>
+
+      <div class="mem-card" onclick="showSorry()">
+        <div class="mem-photo"><img src="images/search_page/cafe.jpg" alt="Our Café" /></div>
+        <div class="mem-info">
+          <div class="mem-label">Our Café ☕</div>
+          <div class="mem-date">Dec 2025</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- And a lot more... -->
+    <div class="mem-more-banner">
+      <div class="mem-more-dots">💛 💛 💛</div>
+      <div class="mem-more-text">…and a thousand more moments approx.. 4750 I carry with me every day 🌸</div>
+      <div class="mem-more-sub">every laugh, every look, every little thing — there's just not enough pages in this
+        world to hold all of it 🫶</div>
+    </div>
+
+    <!-- Sorry Note -->
+    <div
+      style="margin:0 14px 20px;background:linear-gradient(135deg,#1a0a0a,#2a1010);border-radius:16px;padding:20px;border:1px solid #4a1a1a;">
+      <div style="font-size:28px;margin-bottom:8px;">🐣</div>
+      <div style="font-size:16px;font-weight:800;color:#ff8a80;margin-bottom:8px;">A note from Saikrishna (yes, that
+        idiot 😗)
+      </div>
+      <div style="font-size:14px;line-height:1.8;color:#ccc;">
+        Swathi,<br><br>
+        I know I messed up… and I can feel the distance in the way we’ve been talking. It’s not like before, and
+        honestly, it’s been bothering me a lot because <em>you</em> matter to me more than I’ve been able to show
+        lately.<br><br>
+        I’m really, truly sorry. Not just a casual sorry—but the kind where I’ve actually thought about what I did, how
+        it made you feel, and how much I don’t want to hurt you like that again.<br><br>
+        You’re not just “someone” in my life… you’re my comfort, my happiness, my person. And right now, it feels
+        incomplete without you being the way you used to be with me.<br><br>
+        I miss <em>us</em>—our real conversations, your energy, the way you talk when you actually mean it. This
+        distance… it doesn’t feel right.<br><br>
+        I’m not asking you to just forget everything instantly. I just want a chance to make things right, to show you I
+        can do better, and to slowly bring back what we had.<br><br>
+        Please don’t stay distant from me… talk to me like before. I’ll do whatever it takes to fix this, because losing
+        you is not something I can handle.<br><br>
+        — Saikrishna 🐸
+      </div>
+      <button onclick="openChat()"
+        style="margin-top:14px;background:linear-gradient(135deg,#ff6b9d,#c44dff);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;">💬
+        Send a Message</button>
+    </div>
+  </div>
+
+
+  <!-- REELS PAGE -->
+  <div id="reels" class="page" style="padding-top:62px;">
+    <div
+      style="height:calc(100vh - 132px);background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;">
+      <div style="font-size:60px;">🎬</div>
+      <div style="color:#fff;font-size:18px;font-weight:700;">Our Blooper Reel 🤡</div>
+      <div style="color:rgba(255,255,255,.6);font-size:14px;text-align:center;padding:0 40px;line-height:1.7;">Okay so
+        this reel is just me being a potato 🥔 and you being the most adorable human. Spoiler: I mess up. Bigger
+        spoiler: I want to fix it. 🎀</div>
+      <button onclick="showSorry()"
+        style="margin-top:8px;background:linear-gradient(135deg,#ff6b9d,#c44dff);color:#fff;border:none;border-radius:22px;padding:12px 28px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;">💌
+        Read my apology</button>
+    </div>
+  </div>
+
+  <!-- MESSAGES LIST PAGE -->
+  <div id="messages" class="page">
+
+    <!-- DM Header -->
+    <div class="dm-header">
+      <div class="dm-back" onclick="showPage('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+          <path d="M19 12H5M12 5l-7 7 7 7" />
+        </svg>
+      </div>
+      <div class="dm-header-user">
+        <div class="dm-username">___sai_krishna___</div>
+        <div class="dm-header-sub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12">
+            <path d="M6 9l6 6 6-6" />
+          </svg>
+        </div>
+      </div>
+      <div class="dm-header-icons">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+          <path d="M23 7l-7 5 7 5V7z" />
+          <rect x="1" y="5" width="15" height="14" rx="2" />
+        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+          <path d="M12 20h9" />
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="dm-search-wrap">
+      <div class="dm-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input type="text" placeholder="Search" class="dm-search-input" />
+      </div>
+    </div>
+
+    <!-- Active Now row -->
+    <div class="dm-active-row">
+      <div class="dm-active-item">
+        <div class="dm-active-av-wrap">
+          <img src="images/profiles/swathi_j18.png" alt="swathij_18" class="dm-active-av" />
+          <div class="dm-active-dot"></div>
+        </div>
+        <div class="dm-active-name">swathij_18</div>
+      </div>
+      <div class="dm-active-item">
+        <div class="dm-active-av-wrap">
+          <img src="images/profiles/Durgaa.png" alt="Durgaa" class="dm-active-av" />
+          <div class="dm-active-dot"></div>
+        </div>
+        <div class="dm-active-name">Durgaa</div>
+      </div>
+      <div class="dm-active-item">
+        <div class="dm-active-av-wrap">
+          <img src="images/profiles/Nayab 😉.png" alt="Nayab" class="dm-active-av" />
+        </div>
+        <div class="dm-active-name">Nayab 😉</div>
+      </div>
+      <div class="dm-active-item">
+        <div class="dm-active-av-wrap">
+          <img src="images/profiles/urstrulymahesh.png" alt="urstrulymahesh" class="dm-active-av" />
+        </div>
+        <div class="dm-active-name">urstruly...</div>
+      </div>
+      <div class="dm-active-item">
+        <div class="dm-active-av-wrap">
+          <img src="images/profiles/Virat Kohli.png" alt="virat.kohli" class="dm-active-av" />
+        </div>
+        <div class="dm-active-name">virat.kohli</div>
+      </div>
+    </div>
+
+    <!-- Messages label -->
+    <div class="dm-section-label">
+      <span>Messages</span>
+      <span class="dm-requests">Requests <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          width="12" height="12">
+          <path d="M9 18l6-6-6-6" />
+        </svg></span>
+    </div>
+
+    <!-- DM List -->
+    <div class="dm-list">
+
+      <!-- swathij_18 — unread -->
+      <div class="dm-item dm-item-unread" onclick="openChat()">
+        <div class="dm-av-wrap">
+          <img src="images/profiles/swathi_j18.png" alt="swathij_18" class="dm-av" />
+          <div class="dm-online"></div>
+        </div>
+        <div class="dm-info">
+          <div class="dm-name dm-name-bold">swathij_18</div>
+          <div class="dm-preview dm-preview-unread">You: Swats… I know I messed up. Please read this once 🥺 · 2m</div>
+        </div>
+        <div class="dm-right">
+          <div class="dm-unread-dot"></div>
+        </div>
+      </div>
+
+      <!-- Durgaa -->
+      <div class="dm-item">
+        <div class="dm-av-wrap">
+          <img src="images/profiles/Durgaa.png" alt="Durgaa" class="dm-av" />
+        </div>
+        <div class="dm-info">
+          <div class="dm-name">Durgaa</div>
+          <div class="dm-preview">SK, you can fix this… just have a proper, honest talk with her, I know you care about
+            her… just talk to her gently, it’ll make a difference · 1h</div>
+        </div>
+        <div class="dm-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"
+            style="opacity:.4">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nayab -->
+      <div class="dm-item">
+        <div class="dm-av-wrap">
+          <img src="images/profiles/Nayab 😉.png" alt="Nayab" class="dm-av" />
+        </div>
+        <div class="dm-info">
+          <div class="dm-name">Nayab 😉</div>
+          <div class="dm-preview">She’s feeling down. You should talk to her · 3h</div>
+        </div>
+        <div class="dm-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"
+            style="opacity:.4">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- urstrulymahesh -->
+      <div class="dm-item">
+        <div class="dm-av-wrap">
+          <img src="images/profiles/urstrulymahesh.png" alt="urstrulymahesh" class="dm-av" />
+        </div>
+        <div class="dm-info">
+          <div class="dm-name">urstrulymahesh</div>
+          <div class="dm-preview">Liked your photo · Yesterday</div>
+        </div>
+        <div class="dm-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"
+            style="opacity:.4">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- virat.kohli -->
+      <div class="dm-item">
+        <div class="dm-av-wrap">
+          <img src="images/profiles/Virat Kohli.png" alt="virat.kohli" class="dm-av" />
+        </div>
+        <div class="dm-info">
+          <div class="dm-name">virat.kohli</div>
+          <div class="dm-preview">Sent you a reel · 2d</div>
+        </div>
+        <div class="dm-right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="18" height="18"
+            style="opacity:.4">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+            <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- CHAT PAGE -->
+  <div id="chat" class="page" style="padding-bottom:120px;">
+    <div class="chat-header">
+      <div style="cursor:pointer;font-size:20px;" onclick="showPage('messages')">←</div>
+      <div class="chat-av"><img src="images/profiles/swathi_j18.png" alt="swathij_18" /></div>
+      <div>
+        <div class="chat-name">swathij_18</div>
+        <div class="chat-status">● Active now</div>
+      </div>
+      <div style="margin-left:auto;display:flex;gap:20px;align-items:center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"
+          style="cursor:pointer;">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        <div style="position:relative;cursor:pointer;display:flex;align-items:center;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="28" height="28">
+            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+          </svg>
+          <div
+            style="position:absolute;top:-1px;right:-3px;width:12px;height:12px;background:#00d000;border-radius:50%;border:2px solid #000;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div style="text-align:center;padding:20px 0 10px;">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--ig-grad);padding:2px;margin:0 auto 10px;">
+          <img src="images/profiles/swathi_j18.png" alt="swathij_18"
+            style="width:100%;height:100%;border-radius:50%;object-fit:cover;border:3px solid #000;" />
+        </div>
+        <div style="font-weight:800;font-size:16px;color:var(--ig-text);">swathij_18</div>
+        <div style="font-size:13px;color:var(--ig-gray);margin-top:4px;">Instagram</div>
+      </div>
+      <div style="text-align:center;margin:10px 0 20px;">
+        <div style="font-size:13px;color:var(--ig-gray);">You've been connected for 6 years 🔗</div>
+      </div>
+
+      <div class="bubble me">Hey Swathi 🙂</div>
+
+      <div class="bubble them">What?</div>
+      <div class="bubble-time">Yesterday, 9:04 AM</div>
+
+      <div class="bubble me">I’ve been wanting to say this… I’m really sorry for what happened.</div>
+      <div class="bubble-time right">Yesterday, 9:06 AM</div>
+
+      <div class="bubble them">Okay</div>
+      <div class="bubble-time">Yesterday, 9:10 AM</div>
+
+      <div class="bubble-time" style="text-align:center;color:var(--ig-gray);font-size:12px;margin:8px 0;">TODAY</div>
+
+      <div class="bubble me">I know things feel off between us now… and I can sense it in the way we talk.</div>
+      <div class="bubble-time right">10:32 AM</div>
+
+      <div class="bubble me">It’s not like before, and honestly I miss that more than I expected.</div>
+      <div class="bubble-time right">10:33 AM</div>
+
+      <div class="bubble me">I’ve been thinking about my mistake properly… and I understand why you felt hurt.</div>
+      <div class="bubble-time right">10:34 AM</div>
+
+      <div class="bubble me">You didn’t deserve that from me, and I really regret putting you in that position.</div>
+      <div class="bubble-time right">10:35 AM</div>
+
+      <div class="bubble me">You matter a lot to me, Swathi… more than I usually say.</div>
+      <div class="bubble-time right">10:36 AM</div>
+
+      <div class="bubble me">I don’t like this distance between us. I miss talking to you normally, sharing things,
+        everything.</div>
+      <div class="bubble-time right">10:37 AM</div>
+
+      <div class="bubble me">I’m not expecting everything to be normal instantly… but I really want to make it right,
+        step by step.</div>
+      <div class="bubble-time right">10:38 AM</div>
+
+      <div class="bubble me">Can we please start talking like before… even a little? I’ll make sure I don’t repeat this
+        again.</div>
+      <div class="bubble-time right">10:39 AM</div>
+
+      <div class="bubble them" id="typing-bubble" style="display:none;">
+        <span style="letter-spacing:3px;font-size:18px;">···</span>
+      </div>
+      <div class="bubble-time" id="typing-time" style="display:none;">Just now</div>
+    </div>
+    <div class="chat-input-wrap">
+      <input class="chat-input" id="chat-input" placeholder="Message..." onkeypress="handleKey(event)" />
+      <button class="send-btn" onclick="sendMsg()">
+        <svg viewBox="0 0 24 24">
+          <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- PROFILE PAGE -->
+  <div id="profile" class="page">
+    <div class="profile-header">
+      <div class="profile-big-av">
+        <div class="profile-big-av-inner">
+          <img src="images/profiles/___sai_krishna___.png" alt="___sai_krishna___" />
+        </div>
+      </div>
+      <div class="profile-stats">
+        <div class="stat-item">
+          <div class="stat-num">18</div>
+          <div class="stat-label">posts</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">475</div>
+          <div class="stat-label">followers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">479</div>
+          <div class="stat-label">following</div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-bio">
+      <div class="profile-name">___sai_krishna___</div>
+      <div class="profile-desc">Oops happens, I apologize faster 🤡🥺<br>Powered by coffee, mistakes & hope<br>Swathi,
+        I’m coming for that smile 💛</div>
+    </div>
+    <div class="profile-btns">
+      <div class="prof-btn" onclick="openChat()">Edit Profile</div>
+      <div class="prof-btn primary" onclick="showSorry()">💌 My Apology</div>
+    </div>
+    <div class="grid-tabs">
+      <div class="grid-tab active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <rect x="3" y="3" width="7" height="7" />
+          <rect x="14" y="3" width="7" height="7" />
+          <rect x="14" y="14" width="7" height="7" />
+          <rect x="3" y="14" width="7" height="7" />
+        </svg></div>
+      <div class="grid-tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+        </svg></div>
+      <div class="grid-tab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path
+            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        </svg></div>
+    </div>
+    <div class="photo-grid">
+      <div class="grid-photo"><img src="images/search_page/first met.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 2.8k</div>
+      </div>
+      <div class="grid-photo"><img src="images/search_page/Beach day.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 4.2k</div>
+      </div>
+      <div class="grid-photo"><img src="images/search_page/cycling date.JPG" alt="post" />
+        <div class="grid-overlay">❤️ 1.9k</div>
+      </div>
+      <div class="grid-photo"><img src="images/posts/swathij_18.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 3.1k</div>
+      </div>
+      <div class="grid-photo"><img src="images/posts/swathij_18_1.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 5.4k</div>
+      </div>
+      <div class="grid-photo"><img src="images/posts/swathij_18_3.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 2.2k</div>
+      </div>
+      <div class="grid-photo"><img src="images/search_page/Birthday.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 6.1k</div>
+      </div>
+      <div class="grid-photo"><img src="images/search_page/new year eve.jpeg" alt="post" />
+        <div class="grid-overlay">❤️ 890</div>
+      </div>
+      <div class="grid-photo"><img src="images/search_page/cafe.jpg" alt="post" />
+        <div class="grid-overlay">❤️ 1.6k</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SORRY MODAL -->
+  <div class="sorry-modal" id="sorry-modal" onclick="closeSorry(event)">
+    <div class="sorry-box">
+      <div class="sorry-emoji">🐣</div>
+      <div class="sorry-title">Okay okay OKAY 🙈</div>
+      <div class="sorry-text">
+        Hi Swathi… it’s me, Saikrishna 🥺<br><br>
+        I messed up, and I can’t stop thinking about it. I feel terrible for hurting you. You’re literally my sunshine,
+        my favourite person, and I let you down.<br><br>
+        I’m so sorry… truly. I wish I could take it back. I just want a chance to make things right, to show you how
+        much you mean to me.<br><br>
+        Please forgive me? I promise I’ll do better, and I’ll never take you for granted again. My heart is all yours 💝
+      </div>
+      <button class="sorry-close"
+        onclick="document.getElementById('sorry-modal').classList.remove('show');openChat()">💬 Go to our chat
+        🎀</button>
+    </div>
+  </div>
+
+  <!-- STORY VIEWER -->
+  <div class="story-viewer" id="story-viewer">
+    <div class="story-progress">
+      <div class="prog-bar">
+        <div class="prog-fill done" id="p1"></div>
+      </div>
+      <div class="prog-bar">
+        <div class="prog-fill active" id="p2"></div>
+      </div>
+      <div class="prog-bar">
+        <div class="prog-fill" id="p3"></div>
+      </div>
+    </div>
+    <div class="story-top">
+      <div class="story-av" id="sv-av">
+        <img id="sv-av-img" src="images/profiles/swathi_j18.png" alt="story user"
+          style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
+      </div>
+      <div>
+        <span class="story-uname" id="sv-name">swathij_18</span>
+        <span class="story-ts" id="sv-ts">2h ago</span>
+      </div>
+      <div class="story-close" onclick="closeStory()">×</div>
+    </div>
+    <div class="story-content">
+      <div class="story-bg" id="sv-bg"></div>
+      <div class="story-text-overlay" id="sv-text">Missing you every single second 💔</div>
+    </div>
+  </div>
+
+  <script src="instagram.js"></script>
+</body>
+
+</html>

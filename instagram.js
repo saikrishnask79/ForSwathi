@@ -115,7 +115,7 @@ const storyData = {
   meera: { img: 'images/profiles/Nayab 😉.png', bg: 'linear-gradient(135deg,#43e97b,#38f9d7)', text: 'Sunday funday ☀️', name: 'Nayab 😉', time: '6h ago' },
   riya: { img: 'images/profiles/urstrulymahesh.png', bg: 'linear-gradient(135deg,#fa709a,#fee140)', text: 'Coffee mornings ☕ best part of the day', name: 'urstrulymahesh', time: '1d ago' },
   kavya: { img: 'images/profiles/Virat Kohli.png', bg: 'linear-gradient(135deg,#a18cd1,#fbc2eb)', text: 'Art n soul 🎨 creating something for my bestie', name: 'virat.kohli', time: '2d ago' },
-  you: { img: 'images/profiles/___sai_krishna___.png', bg: 'linear-gradient(135deg,#434343,#000000)', text: 'Add to your story...', name: '___sai_krishna___', time: 'Now' },
+  you: { img: 'images/profiles/sai_krishna.png', bg: 'linear-gradient(135deg,#434343,#000000)', text: 'Add to your story...', name: '___sai_krishna___', time: 'Now' },
 };
 
 let storyTimeout;
